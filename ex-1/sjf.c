@@ -54,7 +54,7 @@ int main()
                 p[j] = temp;
             }
         }
-
+        t += p[i].bt;
     }
 
     p[0].wt = 0;
