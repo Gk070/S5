@@ -25,7 +25,7 @@ int main()
         printf("Enter burst time P[%d] : ", i + 1);
         scanf("%d", &p[i].bt);
     }
-
+    
     for(i = 0; i < n; i++)
     {
         for(j = 0; j < n - i - 1; j++)
