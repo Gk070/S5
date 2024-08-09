@@ -41,33 +41,18 @@ int main()
 
     for(i = 0; i < n; i++)
     {
-        for(j = 0; j < n - i - 1; j++)
+        if(t < p[i].at)
         {
-            if(t > p[j + 1].at)
+            t += p[i].at;
+        }
+        for(j = i + 1; j < n; j++)
+        {
+            if((t > p[j].at) && (p[j].bt < p[i].bt))
             {
-                if(p[j + 1].at > t)
-                {
-                    for(k = j; k < j + 1; k++)
-                    {
-                        if(p[k].bt > p[k + 1].bt)
-                        {
-                            temp = p[k];
-                            p[k] = p[k + 1];
-                            p[k + 1] = p[k];
-                        }
-                    }
-                }
+                temp = p[i];
+                p[i] = p[j];
+                p[j] = temp;
             }
-            else if(p[j].at == p[j + 1].at)
-            {
-                if(p[j].bt > p[j + 1].bt)
-                {
-                    temp = p[j];
-                    p[j] = p[j + 1];
-                    p[j + 1]= temp;
-                }
-            }
-            t += p[j].bt;
         }
 
     }
