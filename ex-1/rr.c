@@ -46,14 +46,15 @@ void main()
         }
     }
 
+    if(p[0].at > it)
+    {
+        it = p[0].at;
+    }
+
     while(rp > 0)
     {
         for(i = 0; i < np; i++)
         {
-            if(p[i].at > it)
-            {
-                it = p[i].at;
-            }
             if(p[i].rt > 0)
             {
                 if(p[i].rt > quantam)
